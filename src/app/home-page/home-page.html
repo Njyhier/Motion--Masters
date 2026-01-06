@@ -1,0 +1,54 @@
+<div class="w-100 d-flex flex-column align-items-center ">
+
+  <div id="welcome" class="shadow-sm w-75">
+    
+  @for(image of homePageService.slideShowImages(); track $index){
+    @if($index === currentView()){
+      
+      <div id="slide" [ngClass]="{'fade': currentView() === $index}" class="rounded border position-relative w-100">
+        <img id="curr" [src]="image.imgUrl" alt="carImg" class="rounded">
+        <div class="d-flex align-items-center position-absolute top-0 bottom-0">
+          <p class="d-flex">{{image.imgCaption}}</p>
+        </div>
+      </div>
+    }
+  }
+  </div>
+
+  <div id="services" class="d-flex flex-column align-items-center w-75">
+    <h1>What We Offer</h1>
+    <div id="content" class="d-flex flex-row align-items-center  w-100 bg-primary">
+      <div class="col-md-3">
+        <h1>Moving services</h1>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor si</li>
+          <li>Lorem, sit amet consectetur, adipisicing elit.ipsum.</li>
+          <li>Lorem ipsum dolor  Natus distinctio saepe laboriosam,  officia, esse dolorem enim laudantium? Laborum quam et inventore quia esse.</li>
+        <li>sit amet consectetur, adipisicing elit.</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h1>Moving services</h1>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor si</li>
+        <li>Lorem, sit amet consectetur, adipisicing elit.ipsum.</li>
+        <li>Lorem ipsum dolor  Natus distinctio saepe laboriosam,  officia, esse dolorem enim laudantium? Laborum quam et inventore quia esse.</li>
+        <li>sit amet consectetur, adipisicing elit.</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h1>Moving services</h1>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor si</li>
+        <li>Lorem, sit amet consectetur, adipisicing elit.ipsum.</li>
+        <li>Lorem ipsum dolor  Natus distinctio saepe laboriosam,  officia, esse dolorem enim laudantium? Laborum quam et inventore quia esse.</li>
+        <li>sit amet consectetur, adipisicing elit.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
