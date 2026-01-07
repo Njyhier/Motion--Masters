@@ -1,22 +1,151 @@
 {
+  "bikes": [
+    {
+      "id": 1,
+      "serialNumber": "BK-1001",
+      "brand": "Giant",
+      "model": "Escape 3",
+      "category": "hybrid",
+      "frameSize": "M",
+      "frameMaterial": "Aluminum",
+      "wheelSize": 700,
+      "gearCount": 21,
+      "brakeType": "Disc",
+      "color": "Blue",
+      "hourlyRate": 5,
+      "dailyRate": 25,
+      "depositAmount": 100,
+      "currency": "KES",
+      "status": "available",
+      "isAvailable": true,
+      "currentLocation": "Nairobi CBD",
+      "condition": "good",
+      "lastServiceDate": "2025-11-10T00:00:00.000Z",
+      "nextServiceDue": "2026-05-10T00:00:00.000Z",
+      "images": ["bike1-1.jpg", "bike1-2.jpg"]
+    },
+    {
+      "id": 2,
+      "serialNumber": "BK-1002",
+      "brand": "Trek",
+      "model": "Marlin 5",
+      "category": "mountain",
+      "frameSize": "L",
+      "frameMaterial": "Aluminum",
+      "wheelSize": 29,
+      "gearCount": 18,
+      "brakeType": "Hydraulic Disc",
+      "color": "Red",
+      "hourlyRate": 6,
+      "dailyRate": 30,
+      "depositAmount": 120,
+      "currency": "KES",
+      "status": "hired",
+      "isAvailable": false,
+      "currentLocation": "Westlands",
+      "condition": "good",
+      "lastServiceDate": "2025-10-01T00:00:00.000Z",
+      "nextServiceDue": "2026-04-01T00:00:00.000Z",
+      "images": ["bike2.jpg"]
+    }
+  ],
+
   "cars": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "bicycles": [
+      "vehicleId": "CAR-001",
+      "registrationNumber": "KDA 123A",
+      "vin": "1HGCM82633A001",
+      "vehicleType": "Car",
+      "make": "Toyota",
+      "model": "Corolla",
+      "manufactureYear": 2020,
+      "fuelType": "Petrol",
+      "seatingCapacity": 5,
+      "assignedDriverId": "DRV-001",
+      "availabilityStatus": "Available",
+      "currentMileage": 45200,
+      "insuranceExpiryDate": "2026-01-15T00:00:00.000Z",
+      "createdAt": "2025-01-01T08:00:00.000Z",
+      "updatedAt": "2025-12-01T10:00:00.000Z"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "vehicleId": "CAR-002",
+      "registrationNumber": "KDB 456B",
+      "vin": "1HGCM82633A002",
+      "vehicleType": "Van",
+      "make": "Nissan",
+      "model": "NV200",
+      "manufactureYear": 2019,
+      "fuelType": "Diesel",
+      "seatingCapacity": 7,
+      "availabilityStatus": "Maintenance",
+      "currentMileage": 78200,
+      "insuranceExpiryDate": "2025-11-30T00:00:00.000Z",
+      "createdAt": "2024-06-10T09:00:00.000Z",
+      "updatedAt": "2025-11-15T14:00:00.000Z"
     }
   ],
+
   "drivers": [
-    {}
+    {
+      "driverId": "DRV-001",
+      "firstName": "James",
+      "lastName": "Mwangi",
+      "phoneNumber": "+254712345678",
+      "email": "james.mwangi@example.com",
+      "licenseNumber": "DL-90001",
+      "licenseClass": "B",
+      "licenseExpiryDate": "2027-08-01T00:00:00.000Z",
+      "employmentType": "FullTime",
+      "status": "Active",
+      "assignedVehicleId": "CAR-001",
+      "availabilityStatus": "Available",
+      "rating": 4.6,
+      "completedTrips": 312,
+      "createdAt": "2024-03-01T08:00:00.000Z",
+      "updatedAt": "2025-12-01T09:30:00.000Z"
+    },
+    {
+      "driverId": "DRV-002",
+      "firstName": "Grace",
+      "lastName": "Achieng",
+      "phoneNumber": "+254798765432",
+      "email": "grace.achieng@example.com",
+      "licenseNumber": "DL-90002",
+      "licenseClass": "C",
+      "licenseExpiryDate": "2026-11-12T00:00:00.000Z",
+      "employmentType": "Contract",
+      "status": "Active",
+      "availabilityStatus": "OnTrip",
+      "rating": 4.8,
+      "completedTrips": 198,
+      "createdAt": "2024-05-10T10:00:00.000Z",
+      "updatedAt": "2025-12-02T16:00:00.000Z"
+    }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "motorbikes": [
+    {
+      "id": "MB-001",
+      "registrationNumber": "KME 001A",
+      "make": "Bajaj",
+      "model": "Boxer 150",
+      "engineCapacity": 150,
+      "fuelType": "petrol",
+      "passengerCapacity": 2,
+      "rentalRatePerDay": 1200,
+      "availabilityStatus": "available"
+    },
+    {
+      "id": "MB-002",
+      "registrationNumber": "KME 002B",
+      "make": "TVS",
+      "model": "Apache RTR",
+      "engineCapacity": 180,
+      "fuelType": "petrol",
+      "passengerCapacity": 2,
+      "rentalRatePerDay": 1500,
+      "availabilityStatus": "rented"
+    }
+  ]
 }
