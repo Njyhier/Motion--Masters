@@ -1,1 +1,11 @@
-<p>header-component works!</p>
+<div 
+  id="header" 
+  class="bg-dark-subtle w-100 d-flex justify-content-start align-middle text-center mb-1">
+  <div id="icon" class="w-25 h-auto rounded-circle">
+    <img src="{{imagePath()}}" alt="mmlogo" class="w-50 h-100 rounded-circle" >
+  </div>
+  <div id="title" class="w-75 text-center" >
+    <h1 class="pb-0 mb-0">{{title()}}</h1>
+    <p>{{motto()}}</p>
+  </div>
+</div>

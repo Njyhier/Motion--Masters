@@ -3,20 +3,20 @@ export interface IMotorVehicle {
   registrationNumber: string;
   vin: string;
 
-  vehicleType: 'Car' | 'Van' | 'Truck' | 'Bus' | 'Motorbike';
-  make: string;
-  model: string;
-  manufactureYear: number;
+  vehicleType?: 'Car' | 'Van' | 'Truck' | 'Bus' | 'Motorbike';
+  make?: string;
+  model?: string;
+  manufactureYear?: number;
   fuelType: 'Petrol' | 'Diesel' | 'Electric' | 'Hybrid';
 
-  seatingCapacity: number;
+  seatingCapacity?: number;
   payloadCapacityKg?: number;
 
   assignedDriverId?: string;
-  availabilityStatus: 'Available' | 'InUse' | 'Maintenance';
+  availabilityStatus?: 'Available' | 'InUse' | 'Maintenance';
 
-  currentMileage: number;
-  insuranceExpiryDate: Date;
+  currentMileage?: number;
+  insuranceExpiryDate?: Date;
 
   createdAt: Date;
   updatedAt: Date;
