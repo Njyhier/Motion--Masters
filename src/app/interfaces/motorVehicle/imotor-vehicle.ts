@@ -1,6 +1,7 @@
 export interface IMotorVehicle {
   vehicleId: string;
   registrationNumber: string;
+  vin: string;
 
   vehicleType: 'Car' | 'Van' | 'Truck' | 'Bus' | 'Motorbike';
   make: string;

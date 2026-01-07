@@ -8,7 +8,7 @@
       <div id="slide" [ngClass]="{'fade': currentView() === $index}" class="rounded border position-relative w-100">
         <img id="curr" [src]="image.imgUrl" alt="carImg" class="rounded">
         <div class="d-flex align-items-center position-absolute top-0 bottom-0">
-          <p class="d-flex">{{image.imgCaption}}</p>
+          <p class="d-flex text-white fw-bolder">{{image.imgCaption}}</p>
         </div>
       </div>
     }
