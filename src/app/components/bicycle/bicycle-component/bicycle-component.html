@@ -1,1 +1,23 @@
-<p>bicycle-component works!</p>
+<div id="container" class="d-flex">
+  @for (bike of mbicycles(); track $index) {
+    @if (bike) {
+      <div id="bike-details" class="col-sm-2 col-md-3 p-0 m-1">
+        <div id="img">
+          <img [src]="'assets/' + bike?.images?.[1]" alt="img" class="h-50 w-100">
+        </div>
+        <div id="info">
+          <h4 class="m-0 p-0">{{bike?.name}} </h4>
+          <div id="det" class="d-flex justify-content-between">
+            <div>
+              <p class="m-0 p-0">{{bike?.reviews?? '0'}} Reviews</p>
+              <h6 class="m-0 p-0">{{bike?.currency}}{{bike?.sellingPrice}}</h6>
+            </div>
+            <div id="btn" class="mb-0 d-flex align-middle">
+              <button class="rounded-2 bg-success bg-opacity-75" type="button">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  }
+</div>

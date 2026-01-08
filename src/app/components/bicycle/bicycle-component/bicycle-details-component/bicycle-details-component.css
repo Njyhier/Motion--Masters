@@ -1,0 +1,35 @@
+#tab img{
+  height: 70px;
+  max-height: 100px;
+  width: auto;
+  max-width: 50px;
+}
+
+#tab div{
+  margin: .1%;
+  margin-top: 5px;
+}
+#tab {
+  padding: 0%;
+}
+#gallery{
+  min-height: 60%;
+  padding-bottom: 0%;
+}
+#prices span, #specs span {
+  font-weight: 900;
+}
+#prices pre, #specs pre, #specs hr{
+  display: flex;
+  align-content: center;
+  padding: 0%;
+  margin: 0%;
+}
+
+@media screen and (max-width: 400px) {
+  #gallery {
+    height: 75%;
+    padding-bottom: 0%;
+    margin: 0%;
+  }
+}

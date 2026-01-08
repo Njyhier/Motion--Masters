@@ -3,12 +3,14 @@
     {
       "id": 1,
       "serialNumber": "BK-1001",
+      "name": "Huffy",
       "brand": "Giant",
       "model": "Escape 3",
       "category": "hybrid",
       "frameSize": "M",
       "frameMaterial": "Aluminum",
       "wheelSize": 700,
+      "sellingPrice": 12000,
       "gearCount": 21,
       "brakeType": "Disc",
       "color": "Blue",
@@ -22,11 +24,12 @@
       "condition": "good",
       "lastServiceDate": "2025-11-10T00:00:00.000Z",
       "nextServiceDue": "2026-05-10T00:00:00.000Z",
-      "images": ["bike1-1.jpg", "bike1-2.jpg"]
+      "images": ["im1.jpeg", "im2.jpeg", "im3.avif", "im4.avif", "im5.avif", "im6.avif"]
     },
     {
       "id": 2,
       "serialNumber": "BK-1002",
+      "name": "Canyon Endurance",
       "brand": "Trek",
       "model": "Marlin 5",
       "category": "mountain",
@@ -39,6 +42,7 @@
       "hourlyRate": 6,
       "dailyRate": 30,
       "depositAmount": 120,
+      "sellingPrice": 12000,
       "currency": "KES",
       "status": "hired",
       "isAvailable": false,
@@ -46,7 +50,7 @@
       "condition": "good",
       "lastServiceDate": "2025-10-01T00:00:00.000Z",
       "nextServiceDue": "2026-04-01T00:00:00.000Z",
-      "images": ["bike2.jpg"]
+      "images": ["im1.jpeg", "im2.jpeg", "im3.avif", "im4.avif", "im5.avif", "im6.avif"]
     }
   ],
 

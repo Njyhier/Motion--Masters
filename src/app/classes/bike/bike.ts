@@ -1,5 +1,6 @@
 export class Bike {
   id!: number;
+  name!: string;
   serialNumber!: string;
   brand!: string;
   model!: string;
@@ -16,6 +17,7 @@ export class Bike {
   dailyRate?: number;
   depositAmount?: number;
   currency?: string;
+  sellingPrice!: number;
 
   status?: 'available' | 'hired' | 'maintenance' | 'retired';
   isAvailable?: boolean;
@@ -24,5 +26,6 @@ export class Bike {
   condition?: 'new' | 'good' | 'fair' | 'damaged';
   lastServiceDate?: Date;
   nextServiceDue?: Date;
+  reviews!: string;
   images?:string[];
 }

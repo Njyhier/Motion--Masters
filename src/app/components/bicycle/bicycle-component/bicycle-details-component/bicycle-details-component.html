@@ -1,0 +1,56 @@
+<div id="container" class="w-100 bg-white h-100 d-md-flex">
+  <div id="gallery" class="col-sm-12 col-md-7 me-1 pb-1 pb-sm-1">
+    <div id="currentImage" class="h-75 col-sm-12 pb-0 m-0 bg-warning">
+      <img [src]="'assets/' + currentImage()" alt="img" class=" h-100 w-100 m-0 p-0">
+    </div>
+    <div id="tab" class="d-flex justify-content-center p-0 m-0">
+      @for (img of images();track $index;let i = $index ) {
+        <div class="">
+          <img [src]="'assets/' + img" [name]="img" class=" w-auto" (click)="currentImageIndex.set(i)">
+        </div>
+      }
+    </div>
+  </div>
+  <div id="info" class="col-sm-12 col-md-5 bg-white shadow-lg">
+    <h1 class="p-0">{{bike.name}}</h1>
+    <hr class="p-0 m-0">
+    <p id="reviews" class="m-0 p-1 d-flex align-middle">
+      {{bike.reviews}} Reviews
+    </p>
+    <hr class="p-0 m-0">
+    <div id="prices">
+      <h3 class="bg-dark-subtle"> Rates:</h3>
+      <pre><span>Hourly: </span>{{bike.currency}} {{bike.hourlyRate}}  </pre>
+      <pre><span>Daily: </span>{{bike.currency}} {{bike.dailyRate}} </pre>
+      <pre><span>Buy for </span>{{bike.currency}} {{bike.sellingPrice}} </pre>
+
+      <div id="buttons" class="d-flex justify-content-between">
+        <button type="button" class="w-50 rounded-pill m-1 bg-success bg-opacity-50">Buy</button>
+        <button type="button" class="w-50 rounded-pill m-1">Rent</button>
+      </div>
+    </div>
+    <div id="specs" class="ms-1">
+      <h2 class="bg-dark-subtle">Bike Specifications:</h2>
+      <pre ><span>Frame:</span> {{bike.frameMaterial}}</pre>
+      <hr >
+      <pre ><span>Size:</span> {{bike.frameSize}}</pre>
+      <hr >
+      <pre ><span>Gears:</span> {{bike.gearCount}}</pre>
+      <hr >
+      <pre ><span>Brand:</span> {{bike.brand}}</pre>
+      <hr >
+      <pre ><span>Category:</span> {{bike.category}}</pre>
+      <hr >
+    </div>
+    <div id="features" class="m-1">
+      <h1 class="bg-dark-subtle">Main Features:</h1>
+      <ul>
+        <li>Lightweight &amp; Aerodynamic </li>
+        <li>{{bike.gearCount}}-Speed Shimamo Ultrega</li>
+        <li>Hydraulic Disc Brakes</li>
+        <li>Tubeless Ready wheels</li>
+        <li>Endurance Geometry</li>
+      </ul>
+    </div>
+  </div>
+</div>
