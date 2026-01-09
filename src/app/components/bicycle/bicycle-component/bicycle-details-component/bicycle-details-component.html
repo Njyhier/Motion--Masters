@@ -5,7 +5,7 @@
     </div>
     <div id="tab" class="d-flex justify-content-center p-0 m-0">
       @for (img of images();track $index;let i = $index ) {
-        <div class="">
+        <div>
           <img [src]="'assets/' + img" [name]="img" class=" w-auto" (click)="currentImageIndex.set(i)">
         </div>
       }

@@ -1,3 +1,14 @@
 #sidebar{
   min-height: 100%;
+  width: fit-content;
+}
+ul a {
+  text-decoration: none;
+  color: #000
+
+
+}
+ul li{
+  list-style-type: none;
+  font-weight: 500;
 }

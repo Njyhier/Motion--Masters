@@ -29,3 +29,4 @@ export class Bike {
   reviews!: string;
   images?:string[];
 }
+

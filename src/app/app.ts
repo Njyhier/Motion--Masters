@@ -1,14 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page';
 import { HeaderComponent } from './components/header/header-component/header-component';
 import { SidebarComponent } from './components/sidebar/sidebar-component/sidebar-component';
-import { BicycleComponent } from './components/bicycle/bicycle-component/bicycle-component';
-import { BicycleDetailsComponent } from './components/bicycle/bicycle-component/bicycle-details-component/bicycle-details-component';
-
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent,SidebarComponent, BicycleComponent],
+  imports: [HeaderComponent, SidebarComponent, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

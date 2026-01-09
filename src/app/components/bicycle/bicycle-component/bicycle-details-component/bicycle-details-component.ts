@@ -1,5 +1,6 @@
-import { Component, OnInit, signal, computed } from '@angular/core';
+import { Component, OnInit, signal, computed, inject } from '@angular/core';
 import { Bike } from '../../../../classes/bike/bike';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bicycle-details-component',
@@ -9,6 +10,8 @@ import { Bike } from '../../../../classes/bike/bike';
 })
 export class BicycleDetailsComponent implements OnInit {
   bike!: Bike;
+  private activatedRoute = inject(ActivatedRoute);
+  private bikeId = signal<string>('');
   images = signal<string[]>([]);
   currentImageIndex = signal(4);
   currentImage = computed<string>(
@@ -21,20 +24,22 @@ export class BicycleDetailsComponent implements OnInit {
   private apiUrl = 'http://localhost:3000/bikes'; 
 
   ngOnInit(): void {
-    this.getBike().then(
-      res => {
-        this.bike = res;
-        this.images.set(this.bike?.images ?? [])
-      })
-  }
+    this.activatedRoute?.queryParams.subscribe(
+    params =>  {
+      const bikeId =params['id'];
+      if(bikeId){
+        this.getBike(bikeId).then(res => {
+          this.bike = res;
+          this.images.set(this.bike.images || [])
+        });
+      }
+    }    
+   )
 
- async getBike(){
-  const res = await fetch(`${this.apiUrl}/1`);
+  }
+ async getBike(id: string){
+  const res = await fetch(`${this.apiUrl}/${id}`);
   return await res.json()
   }
-   setCurrentImageIndex(name: string): number{
-    const tabImages = document.querySelectorAll('[name="img"]')
-    let clickedImage = Array.from(tabImages).findIndex(a => a.getAttribute('name') === name)
-    return clickedImage;
-   }
+
 }

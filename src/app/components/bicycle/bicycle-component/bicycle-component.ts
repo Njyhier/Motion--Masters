@@ -1,6 +1,14 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { BikeService } from '../../../services/bike/bike-service';
 import { Bike } from '../../../classes/bike/bike';
+import { Route, Router } from '@angular/router';
+import { BicycleDetailsComponent } from './bicycle-details-component/bicycle-details-component';
+
+const route: Route ={
+    path:"bike",
+    component: BicycleDetailsComponent
+  }
+
 
 @Component({
   selector: 'app-bicycle-component',
@@ -11,13 +19,14 @@ import { Bike } from '../../../classes/bike/bike';
 export class BicycleComponent implements OnInit {
   private bicycleService = inject(BikeService);
   mbicycles = signal<Bike[]>([]);
+  private router = inject(Router)
   
   ngOnInit(): void {
     this.renderBikes()
   }
 
   renderBikes(){
-    this.bicycleService?.getBicycles()?.subscribe({
+    this.bicycleService.getBicycles().subscribe({
       next: data => this.mbicycles?.set(data),
       error: () => alert('error'),
       complete() {
@@ -25,13 +34,11 @@ export class BicycleComponent implements OnInit {
       }
     })
   }
-  search(){
-
-  }
-  sortBy(){
-
-  }
-  filter(){
-    
+  goToBikeDetails(index: number){
+    console.log('initializing bike details component')
+    const bikeId = this.mbicycles()[index].id;
+    this.router.navigate(['/bike'], {
+      queryParams: {id: bikeId}
+    })
   }
 }
