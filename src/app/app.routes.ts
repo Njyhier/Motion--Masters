@@ -13,7 +13,8 @@ import { BlogsComponent } from './components/blogs/blogs-component/blogs-compone
 export const routes: Routes = [
   {
     path: '',
-    component: HomePageComponent
+    loadComponent: () => import('./home-page/home-page').then(c => c.HomePageComponent),
+    title: 'Motion Masters-Home'
   },
   {
     path: 'motorbikes',
@@ -41,7 +42,9 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    // component: LoginComponent,
+    loadComponent: () => import('./components/login/login-component/login-component').then(m => m.LoginComponent),
+    title: 'Motion Masters-login'
   },
   {
     path: 'blogs',

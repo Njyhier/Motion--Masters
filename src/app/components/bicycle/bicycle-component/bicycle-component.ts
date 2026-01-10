@@ -29,7 +29,7 @@ export class BicycleComponent implements OnInit {
   renderBikes(){
     this.bicycleService.getBicycles().subscribe({
       next: data => this.mbicycles?.set(data),
-      error: (e) => console.log(e.message),
+      error: (e) => console.log( 'error'),
       complete() {
         console.log('bikes rendered');
       }
@@ -37,7 +37,7 @@ export class BicycleComponent implements OnInit {
   }
   goToBikeDetails(index: number){
     console.log('initializing bike details component')
-    const bikeId = this.mbicycles()[index].id;
+    const bikeId = this.mbicycles()?.[index].id;
     this.router.navigate(['/bike'], {
       queryParams: {id: bikeId}
     })

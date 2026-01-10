@@ -10,8 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BicycleDetailsComponent implements OnInit {
   bike!: Bike;
-  private activatedRoute = inject(ActivatedRoute);
-  private bikeId = signal<string>('');
+  private readonly activatedRoute = inject(ActivatedRoute);
   images = signal<string[]>([]);
   currentImageIndex = signal(4);
   currentImage = computed<string>(
@@ -21,10 +20,10 @@ export class BicycleDetailsComponent implements OnInit {
       return images[i] ?? '';
     }
   )
-  private apiUrl = 'http://localhost:3000/bikes'; 
+  private readonly apiUrl = 'http://localhost:3000/bikes'; 
 
   ngOnInit(): void {
-    this.activatedRoute?.queryParams.subscribe(
+    this.activatedRoute.queryParams.subscribe(
     params =>  {
       const bikeId =params['id'];
       if(bikeId){
